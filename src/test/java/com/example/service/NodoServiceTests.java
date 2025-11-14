@@ -35,12 +35,10 @@ public class NodoServiceTests {
 
     @BeforeEach
     public void setup(){
-        //nodoRepository = Mockito.mock(NodoRepository.class);
-        //nodoService = new NodoServiceImpl(nodoRepository);
         nodo = Nodo.builder()
                 .id(1L)
-                .titulo("Ramesh")
-                .cuerpo("Fadatare")
+                .titulo("titulo")
+                .cuerpo("cuerpo")
                 .build();
     }
 
@@ -93,8 +91,8 @@ public class NodoServiceTests {
 
         Nodo nodo1 = Nodo.builder()
                 .id(2L)
-                .titulo("Tony")
-                .cuerpo("Stark")
+                .titulo("titulo2")
+                .cuerpo("cuerpo2")
                 .build();
 
         given(nodoRepository.findAll()).willReturn(List.of(nodo,nodo1));
@@ -115,8 +113,8 @@ public class NodoServiceTests {
 
         Nodo nodo1 = Nodo.builder()
                 .id(2L)
-                .titulo("Tony")
-                .cuerpo("Stark")
+                .titulo("titulo2")
+                .cuerpo("cuerpo2")
                 .build();
 
         given(nodoRepository.findAll()).willReturn(Collections.emptyList());

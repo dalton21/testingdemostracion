@@ -26,8 +26,8 @@ public class NodoRepositoryIT {
     @BeforeEach
     public void setup(){
         nodo = Nodo.builder()
-                .titulo("Ramesh")
-                .cuerpo("Fadatare")
+                .titulo("titulo")
+                .cuerpo("cuerpo")
                 .build();
     }
     // JUnit test for save nodo operation
@@ -37,8 +37,8 @@ public class NodoRepositoryIT {
 
         //given - precondition or setup
         Nodo nodo = Nodo.builder()
-                .titulo("Ramesh")
-                .cuerpo("Ramesh")
+                .titulo("titulo")
+                .cuerpo("cuerpo")
                 .build();
         // when - action or the behaviour that we are going test
         Nodo savedNodo = nodoRepository.save(nodo);
@@ -56,8 +56,8 @@ public class NodoRepositoryIT {
         // given - precondition or setup
 
         Nodo nodo1 = Nodo.builder()
-                .titulo("John")
-                .cuerpo("Cena")
+                .titulo("titulo2")
+                .cuerpo("cuerpo2")
                 .build();
 
         nodoRepository.save(nodo);

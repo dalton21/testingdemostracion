@@ -52,11 +52,6 @@ public class NodoRepositoryTests {
     @Test
     public void givenNodosList_whenFindAll_thenNodosList(){
         // given - precondition or setup
-//        Nodo nodo = Nodo.builder()
-//                .firstName("Ramesh")
-//                .lastName("Ramesh")
-//                .email("ramesh@gmail,com")
-//                .build();
 
         Nodo nodo1 = Nodo.builder()
                 .titulo("Titulo1")
@@ -80,11 +75,6 @@ public class NodoRepositoryTests {
     @Test
     public void givenNodoObject_whenFindById_thenReturnNodoObject(){
         // given - precondition or setup
-//        Nodo nodo = Nodo.builder()
-//                .firstName("Ramesh")
-//                .lastName("Ramesh")
-//                .email("ramesh@gmail,com")
-//                .build();
         nodoRepository.save(nodo);
 
         // when -  action or the behaviour that we are going test
@@ -99,11 +89,6 @@ public class NodoRepositoryTests {
     @Test
     public void givenNodoEmail_whenFindByEmail_thenReturnNodoObject(){
         // given - precondition or setup
-//        Nodo nodo = Nodo.builder()
-//                .firstName("Ramesh")
-//                .lastName("Fadatare")
-//                .email("ramesh@gmail,com")
-//                .build();
         nodoRepository.save(nodo);
 
         // when -  action or the behaviour that we are going test

@@ -41,15 +41,15 @@ public class NodoControllerITests {
     @Test
     public void givenNodoObject_whenCreateNodo_thenReturnSavedNodo() throws Exception {
         Nodo nodo = Nodo.builder()
-                .titulo("Ramesh")
-                .cuerpo("Fadatare")
+                .titulo("titulo")
+                .cuerpo("cuerpo")
                 .build();
 
         mockMvc.perform(post("/nodos")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(nodo)))
                 .andExpect(status().isCreated())
-                .andExpect(jsonPath("$.titulo", is("Ramesh")));
+                .andExpect(jsonPath("$.titulo", is("titulo")));
     }
 
     @Test
